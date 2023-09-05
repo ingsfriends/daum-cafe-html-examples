@@ -1,0 +1,411 @@
+<!-- PC 경기 중계 -->
+<div class="pc_ingchins" style="width: 100%; text-align: center; position: relative;">
+  <img
+    src="https://t1.daumcdn.net/cafeattach/1YV3j/765b0506607fde9496efa4878e8f0df915b8ed20" class="header_img"
+    style="width: 100%; height: auto;">
+  <div style="width: 100%; text-align: center; position: relative;">
+    <img
+      src="https://t1.daumcdn.net/cafeattach/1YV3j/ff90894926f18dd261e27e41bbc5b6d785254cd5" class="left_gif"
+      style="width: 20%; height: auto;">
+    <iframe
+      src="https://play.afreecatv.com/afbaseball3/248098711/embed"
+      style="width: 50.6%; aspect-ratio: 1.9; position: relative;"
+      frameborder="0" allowfullscreen="">
+    </iframe>
+    <img
+      src="https://t1.daumcdn.net/cafeattach/1YV3j/43a05e1a42161ce41cf85636593232dfa297d50f" class="right_gif"
+      style="width: 20%; height: auto;">
+  </div>
+</div>
+
+<!-- 다음카페 앱 경기 중계 -->
+<div class="mobile_ingchins" style="width: 100%; text-align: center; position: relative;">
+  <img
+    src="https://t1.daumcdn.net/cafeattach/1YV3j/7b6a5a9b6a51185b337c1ea220a2681d7d508d0e" class="header_img"
+    style="width: 100%; height: auto;">
+  <iframe
+    src="https://play.afreecatv.com/afbaseball3/248098711/embed"
+    style="width: 100%; aspect-ratio: 1.9; position: relative;"
+    frameborder="0" allowfullscreen="">
+  </iframe>
+</div>
+
+<!-- 다음카페 앱 카카오 광고 따라하기 -->
+<div class="ingchin_ad_area" style="display: block; vertical-align: top; position: relative; text-decoration: none; min-height: 206px; max-height: 330px; overflow: hidden;">
+  <div class="ingchin_ad">
+    <!-- 다크모드일때 themed / 큰글씨모드일때 fs_big -->
+    <div class="tit_cm">
+      <strong class="tit_adcm">프리미엄링크</strong>
+    </div>
+    <a href="https://cafe.daum.net/ingsfriend" class="link_ad" rel="noopener" target="_blank">
+      <span class="thumb_img">
+        <span class="inner_img">
+          <img src="https://t1.daumcdn.net/cafeattach/1YV3j/2bff0a7c1c5d7119716d052685393f87e6f51cf6" class="img_thumb">
+          <!-- <span class="frame_g"></span> 왜 튀어나오지 빡치게 -->
+        </span>
+      </span>
+      <span class="area_ad">
+        <!-- 심의필이 있을때 area_ad / 텍스트가 두줄일때 area_rows -->
+        <span class="inner_ad">
+          <span class="cont_ad">
+            <strong class="tit_ad">
+              오늘 NC 경기 시구 누구?
+              <span class="ad_info"></span>
+            </strong>
+            <strong class="desc_ad">미녀 크리에이터 우정잉!!!</strong>
+            <span class="url_ad">그녀의 팬카페에 지금 접속해보세요!</span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a href="https://cafe.daum.net/ingsfriend" class="btn_ad" rel="noopener" target="_blank">
+      <span class="inner_btn">자세히 보기</span>
+      <!--
+        <span class="ico_arrow"></span> TODO: ico_arrow 드럽게 안되네...
+      -->
+    </a>
+    <a href="https://cafe.daum.net/ingsfriend" class="icon_ad" rel="noopener" target="_blank">
+      <span class="img_mark">광고 정보</span>
+    </a>
+  </div>
+</div>
+
+<style>
+  /*** PC ***/
+
+  /* PC 카페 좌측 메뉴 비활성화 */
+  #cafemenu {
+    display: none;
+  }
+  /* PC 게시글 좌측 여백 없애기 */
+  #content {
+    margin-left: 0 !important;
+  }
+
+  /* PC 작성자 정보 안보이게 */
+  #content .bbs_read_tit .info_desc { display: none; }
+
+  /* 카페 배너 및 카페 프사 교체 */
+  #TITLEBACKGROUND {
+    background: url(https://t1.daumcdn.net/cafeattach/1YV3j/7b7cf40eddd320cbf54dc17edbf8cb31abc2d2a9) no-repeat center;
+    background-size: cover;
+  }
+
+  /* 모바일 버젼 PC에서 안보이게 */
+  #content div.mobile_ingchins {
+    display: none;
+  }
+
+  /*** 모바일 ***/
+
+  /* 모바일 작성자 정보 안보이게 */
+  #mArticle > div:first-child > :last-child { display: none; }
+
+  /* PC 버젼 모바일에서 안보이게 */
+  #mArticle div.pc_ingchins {
+    display: none;
+  }
+</style>
+
+<style>
+  /* [다음카페 광고 따라하기]
+   *
+   */
+
+  /* PC/모바일 내용 다르게
+   *
+   * #content (PC)
+   *   > .ingchin_ad_area (위에 작성된 잉친광고)
+   *
+   * #mArticle (모바일)
+   *   > .banner_wrapper (광고 배너 껍데기; 안없애면 공간 차지함)
+   *   > .kakao_ad_area (원래 모바일 광고)
+   *
+   * {NOTE}
+   *   - none 뒤에 !important 안적어놓으면 뒤에 작성될 CSS 코드에 의해 display 값 덮어 씌워짐
+   */
+  #content .ingchin_ad_area {
+    display: none !important;
+  }
+  #mArticle .banner_wrapper, #mArticle .kakao_ad_area {
+    display: none !important;
+  }
+
+  /* 실제 카카오 모바일 광고배너 iframe stylesheet 커스텀화
+   *
+   * #content (PC)
+   *   > .ingchin_ad_area (위에 작성된 잉친광고)
+   *
+   * #mArticle (모바일)
+   *   > .banner_wrapper (광고 배너 껍데기; 안없애면 공간 차지함)
+   *   > .kakao_ad_area (원래 모바일 광고)
+   *
+   * {NOTE}
+   *   - class `.cm_ad`에 적용된 스타일을 `.ingchin_ad`에 적용되도록 변경하고
+   *     입맛에 맞게 커스텀화
+   */
+  /* style */
+  /*2021-04-22 수정 시작*/
+  .img_thumb {
+    display: block;
+    width: 100%;
+    vertical-align: top;
+  }
+  .ingchin_ad {
+    position: relative;
+    left:0; right:0;
+    top:0; bottom:0;
+    height: 100vh; max-height: 330px;
+    padding: 50px 0 42px;
+    /* background: #fff; */
+    box-sizing: border-box;
+    text-align: initial;
+  }
+  /* .ingchin_ad .inner_cm {height:100%} */ /* 2021-05-17 */
+  .ingchin_ad .link_ad {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    height: 100%;
+    padding: 0 20px;
+  } /* 2021-05-21_v3 수정 */
+  .ingchin_ad .thumb_img {
+    display: block;
+    /* overflow: hidden; */
+    position: absolute;
+    top: 25%; /* 50 -> 25 */
+	  right: 20px; /* 238 */
+    width: 90px;
+    height: 90px;
+    border-radius: 3px;
+  } /* 2021-05-17 */
+  /*
+  .ingchin_ad .thumb_img .frame_g {
+    position: absolute;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 3px;
+  } |* 2021-05-21 수정 *|
+  */
+  .ingchin_ad .thumb_img .inner_img {
+    display: block;
+    position: relative;
+    height: 100%;
+  }
+  .ingchin_ad .thumb_img .img_thumb {
+    display: inline-block;
+    width: auto;
+    height: 100%;
+    vertical-align: top;
+  } /* 2021-05-17 */
+  .ingchin_ad .area_ad {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    max-height: 238;
+    height: 100%;
+  }
+  .ingchin_ad .area_ad .inner_ad {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  } /* 2021-05-17 */
+  .ingchin_ad .area_ad .cont_ad {
+    position: absolute;
+    left: 0; right: 108px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .ingchin_ad .tit_ad{
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #1565C0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    letter-spacing: -0.5px
+  } /* 2021-05-21_v3 수정 */
+  .ingchin_ad .ad_info {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* color: #9a9a9a; */
+    letter-spacing: 0;
+  }
+  .ingchin_ad .desc_ad{
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    max-height: 48px;
+    padding-top: 9px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* color: #333; */
+    opacity: 0.75; /* 다크모드 지원을 위해 color 대신 투명도 사용 */
+    text-overflow: ellipsis;
+    word-break: break-all;
+    white-space: normal;
+    word-wrap: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  } /* 2021-05-17 */
+  .ingchin_ad .url_ad {
+    display: block;
+    overflow: hidden;
+    margin-top: 9px;
+    font-size: 15px;
+    line-height: 20px;
+    /* color: #999; */
+    opacity: 0.5; /* 다크모드 지원을 위해 color 대신 투명도 사용 */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .ingchin_ad .tit_cm {
+    position: absolute;
+    left: 0; right: 0;
+    top: 0;
+    height: 50px;
+    padding: 0 20px;
+    text-align: left;
+    box-sizing: border-box;
+  }
+  .ingchin_ad .tit_adcm {
+    display: block;
+    padding-top: 4px;
+    border-bottom: 1px solid; /*#eaeaea*/
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 45px;
+    /* color: #111; */
+    box-sizing: border-box;
+  }
+  .ingchin_ad .btn_ad {
+    display: block;
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 0;
+    height: 42px;
+    padding: 0 20px;
+    text-align: center; /* 추가 */
+  }
+  .ingchin_ad .btn_ad .inner_btn {
+    display: block;
+    padding-top: 3px;
+    border-top: 1px solid; /*#F0F0F0*/
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 37px;
+    /* color: #101010; */
+    /* text-align: center; */
+  }
+  /* TODO: ico_arrow
+  .ingchin_ad .btn_ad .inner_btn .ico_arrow {
+    display: inline-block;
+    position: relative;
+    margin: 14px 0 0 6px;
+    vertical-align: top;
+  }
+  .ingchin_ad .btn_ad .inner_btn .ico_arrow:after {
+    position: absolute;
+    left: -2px; top: 0;
+    width: 6px; height: 6px;
+    border-top: 1px solid; |* #000 *|
+    border-right: 1px solid; |* #000 *|
+    transform: rotate(45deg);
+    content:"";
+  }
+  */
+
+  .area_info .tit_ad {margin-top:4px}
+  .area_info .desc_ad {padding-top:4px}
+  .area_info.area_rows .url_ad {margin-top:0}
+
+  /*admark*/
+  .ingchin_ad .icon_ad {
+    overflow: hidden;
+    position: absolute;
+    right: 16px; top: 15px;
+    width: 33px; height: 24px;
+    font-size: 0px;
+  }
+  .ingchin_ad .icon_ad .img_mark {
+    display: block;
+    width: 25px; height: 16px;
+    margin: 4px auto;
+    background: url(https://t1.daumcdn.net/biz/ui/ad/ico_adlogo2.png) no-repeat 0 0;
+    background-size: 25px 16px;
+  }
+
+  /*imark*/
+  .ingchin_ad .icon_ad.imark {width:22px;height:22px}
+  .ingchin_ad .imark .img_mark {
+    display: block;
+    width: 14px; height: 14px;
+    margin: 4px auto;
+    background:url(https://t1.daumcdn.net/biz/ui/ad/ADmark/i_mark_200803.png) no-repeat 0 0;
+    background-size:14px 14px;
+  }
+
+  /*android 분기*/
+  .os_android .ingchin_ad .tit_ad,
+  .os_windows .ingchin_ad .tit_ad {margin-top:1px;letter-spacing:-0.5px}
+  .os_android .ingchin_ad .desc_ad,
+  .os_windows .ingchin_ad .desc_ad {padding-top:7px;letter-spacing:-0.5px}
+  .os_android .ingchin_ad .btn_ad,
+  .os_windows .ingchin_ad .btn_ad {height:40px}
+  .os_android .ingchin_ad .area_rows .desc_ad,
+  .os_windows .ingchin_ad .area_rows .desc_ad {padding-top:8px;line-height:23px}
+  .os_android .ingchin_ad .area_rows .url_ad,
+  .os_windows .ingchin_ad .area_rows .url_ad {margin-top:9px;line-height:20px}
+  .os_android .ingchin_ad .area_info.area_rows .ad_info,
+  .os_windows .ingchin_ad .area_info.area_rows .ad_info {margin-top:2px}
+  .os_android .ingchin_ad .area_info.area_rows .desc_ad,
+  .os_windows .ingchin_ad .area_info.area_rows .desc_ad {padding-top:5px}
+  .os_android .ingchin_ad .area_info.area_rows .url_ad,
+  .os_windows .ingchin_ad .area_info.area_rows .url_ad {margin-top:2px}
+  .os_android .ingchin_ad .btn_ad .inner_btn,
+  .os_windows .ingchin_ad .btn_ad .inner_btn {line-height:34px}
+
+  /* 2021-08-02 추가 */
+  /* 다크모드(공통) */
+  @media (prefers-color-scheme:dark) {
+    /*
+    .themed,
+    .themed .link_ad {background:#121212}
+    .themed .area_ad {border-color:#121212}
+    .themed .tit_ad {color:#1565C0}
+    .themed .desc_ad {color:#C6C6C6}
+    .themed .ad_info,
+    .themed .url_ad {color:#919191}
+    */
+    .themed .tit_adcm {
+      border-bottom: 1px solid; /*#383838*/
+      /* color: #E7E7E7; */
+    }
+    .themed .btn_ad .inner_btn {
+      border-top: 1px solid; /*#383838*/
+      /* color: #e7e7e7; */
+    }
+    .themed .btn_ad .inner_btn .ico_arrow:after {
+      border-top: 1px solid; /*#e7e7e7*/
+      border-right:1px solid; /*#e7e7e7*/
+    }
+  }
+  /* 큰글씨모드(개별) */
+  .fs_big .link_ad {padding-right:30px}
+  .fs_big .tit_ad {margin-top:1px;font-size:19px;line-height:23px}
+  .fs_big .desc_ad {margin-top:5px;font-size:16px;line-height:20px}
+
+</style>
