@@ -1,0 +1,384 @@
+<!-- PC -->
+<img
+  class="pc_ingchins" style="width: 100%; position: relative;"
+  src="https://t1.daumcdn.net/cafeattach/1YV3j/daf5a20840a8a768478e2bdc50bcd39a4ca91c3b">
+</img>
+
+<a href="#" class="pc_ingchins" id="floater" style="right: 10px; bottom: 10px;"></a>
+
+<!-- 다음카페 모바일앱 -->
+<img
+  class="mobile_ingchins" style="width: 100%; position: relative;"
+  src="https://t1.daumcdn.net/cafeattach/1YV3j/bee740c1b4c8be82ea21083aa36db44e3629ff0b">
+</img>
+
+<style>
+  /* [다음카페 게시글 트게더 스타일로 바꾸기]
+   * 
+   *   - 잉게더 : https://tgd.kr/s/nanajam777
+   *   - 잉친쓰 : https://cafe.daum.net/ingsfriend
+   */
+
+  /***** 0. 공통 *****/
+
+  /* PC 버젼 모바일앱에서 안보이게 */
+  #mArticle .pc_ingchins {
+    display: none;
+  }
+
+  /* 모바일앱 버젼 PC에서 안보이게 */
+  #content .mobile_ingchins {
+    display: none;
+  }
+
+  :root {
+
+    /*** 프로필 사진 ***/
+    --teusoo-00: url(https://static-cdn.jtvnw.net/user-default-pictures-uv/ebb84563-db81-4b9c-8940-64ed33ccfc7b-profile_image-300x300.png); /* mint */
+    --teusoo-01: url(https://static-cdn.jtvnw.net/user-default-pictures-uv/13e5fa74-defa-11e9-809c-784f43822e80-profile_image-300x300.png); /* turquoise */
+    --teusoo-02: url(https://static-cdn.jtvnw.net/user-default-pictures-uv/215b7342-def9-11e9-9a66-784f43822e80-profile_image-300x300.png); /* golden yellow */
+    --teusoo-03: url(https://static-cdn.jtvnw.net/user-default-pictures-uv/294c98b5-e34d-42cd-a8f0-140b72fba9b0-profile_image-300x300.png); /* skyblue */
+    --teusoo-04: url(https://static-cdn.jtvnw.net/user-default-pictures-uv/41780b5a-def8-11e9-94d9-784f43822e80-profile_image-300x300.png); /* magenta */
+    --teusoo-05: url(https://static-cdn.jtvnw.net/user-default-pictures-uv/75305d54-c7cc-40d1-bb9c-91fbe85943c7-profile_image-300x300.png); /* yellow */
+    --teusoo-06: url(https://static-cdn.jtvnw.net/user-default-pictures-uv/998f01ae-def8-11e9-b95c-784f43822e80-profile_image-300x300.png); /* blue */
+    --teusoo-07: url(https://static-cdn.jtvnw.net/user-default-pictures-uv/cdd517fe-def4-11e9-948e-784f43822e80-profile_image-300x300.png); /* indigo */
+    --teusoo-08: url(https://static-cdn.jtvnw.net/user-default-pictures-uv/ce57700a-def9-11e9-842d-784f43822e80-profile_image-300x300.png); /* lime */
+    --teusoo-09: url(https://static-cdn.jtvnw.net/user-default-pictures-uv/dbdc9198-def8-11e9-8681-784f43822e80-profile_image-300x300.png); /* red */
+    --teusoo-10: url(https://static-cdn.jtvnw.net/user-default-pictures-uv/de130ab0-def7-11e9-b668-784f43822e80-profile_image-300x300.png); /* purple */
+    --teusoo-11: url(https://static-cdn.jtvnw.net/user-default-pictures-uv/ead5c8b2-a4c9-4724-b1dd-9f00b46cbd3d-profile_image-300x300.png); /* pink */
+    --teusoo-12: url(https://static-cdn.jtvnw.net/user-default-pictures-uv/ebe4cd89-b4f4-4cd9-adac-2f30151b4209-profile_image-300x300.png); /* lavender gray */
+    
+    /*** 카페 등급 사진 ***/
+    --level-ingkki: url(https://static-cdn.jtvnw.net/badges/v1/ccb2a827-d9ce-4e54-b2f5-d16593992752/1); /* 잉끼 */
+    --level-ing: url(https://static-cdn.jtvnw.net/badges/v1/ccb2a827-d9ce-4e54-b2f5-d16593992752/1); /* broadcaster 아이콘 */
+    --level-admin: url(https://static-cdn.jtvnw.net/badges/v1/ccb2a827-d9ce-4e54-b2f5-d16593992752/1); /* admin 아이콘 */
+    --level-special: url(https://static-cdn.jtvnw.net/badges/v1/ccb2a827-d9ce-4e54-b2f5-d16593992752/1); /* chat moderator 아이콘 */
+
+    /*** 기타 이미지 에셋 ***/
+    --asset-titlebackground: url(https://t1.daumcdn.net/cafeattach/1YV3j/149bcdd16d5f46acd54ad66fc7b425a44a8406df); /* PC 배너 */
+    --asset-ad-pc1: url(https://t1.daumcdn.net/cafeattach/1YV3j/bd40c296af27101ebadeff8251b0e874740933a1); /* PC 광고 1 */
+    /* --asset-ad-pc2: url(https://t1.daumcdn.net/cafeattach/1YV3j/daf5a20840a8a768478e2bdc50bcd39a4ca91c3b); PC 광고 2 */
+    /* --asset-ad-app: url(https://t1.daumcdn.net/cafeattach/1YV3j/bee740c1b4c8be82ea21083aa36db44e3629ff0b); 모바일앱 광고 */
+    --asset-floater: url(https://t1.daumcdn.net/cafeattach/1YV3j/1879b2ab83ffd7285833db7f4a12c739d12c7f85); /* 파일 또는 코드에 "movetotop" 사용 불가 */
+    --asset-whale: url(https://raw.githubusercontent.com/Ingether/resource/master/image/badge18.png); /* 빙글 고래 */
+    --asset-light-icon: url(https://t1.daumcdn.net/cafeattach/1YV3j/69e87b42e87f91d1bf2b0811febd8107042cd99f); /* 트게더 라이트 테마 */
+    --asset-dark-icon: url(https://t1.daumcdn.net/cafeattach/1YV3j/cd3d6dd179100f1d1fa8cac57719a0118847f75f); /* 트게더 다크 테마 */
+  }
+
+  /***** 1. PC 카페 배경색 변경 *****/
+
+  #cafeSubLayout #header { margin-bottom: 0px; }
+  #cafeSubLayout #container { padding-top: 10px; }
+
+  #cafeSubLayout { background-color: #70b7ff; }
+  #cafeSubLayout #header { background-color: white; }
+  #cafeSubLayout #container { background-image: linear-gradient(white, #70b7ff); }
+  #cafeSubLayout #footer { background-color: #70b7ff; }
+
+  @media (prefers-color-scheme: dark) {
+    #cafeSubLayout { background-color: #151515; }
+    #cafeSubLayout #header,
+    #cafeSubLayout #footer { background-color: transparent; }
+    #cafeSubLayout #container { background-image: none; }
+  }
+
+  /***** 2. PC 카페 배너 및 카페 상단 요소 조작 *****/
+  
+  /* 카페 배너 교체 */
+  #TITLEBACKGROUND {
+    background: var(--asset-titlebackground) no-repeat center;
+    background-size: cover;
+  }
+
+  /* 카페 최상단 메뉴 숨기기 */
+  #cafe_gnb { display: none !important; }
+
+  /* 카페 상단 메뉴창 스타일 변경 */
+  #TITLEMENUGROUP .roundL, 
+  #TITLEMENUGROUP #menuItemList, 
+  #TITLEMENUGROUP .roundR { background-image: none; } 
+
+  #TITLEMENUGROUP {
+    background-image: linear-gradient(-45deg, #70b7ff, #99ccff, #d4eeff, #d0e6fc);
+    background-size: 400% 400%;
+  }
+  #TITLEMENUGROUP li a { color: black; }
+
+  @media (prefers-color-scheme: dark) {
+    #TITLEMENUGROUP {
+      background-image: none;
+      border-top: 5px solid #9567fd;
+      background: #242424;
+      border-bottom: 1px solid #535555;
+      border-right: 1px solid #535555;
+      border-left: 1px solid #535555;
+    }
+    #TITLEMENUGROUP li a { color: white; }
+  }
+
+  /* 카페 상단 검색창 숨기기 */
+  #cafemenu div.searchBox { display: none; }
+
+  /***** 3. 사진 조작 *****/
+
+  /*** 3-1. 광고 사진 입력 ***/
+
+  /* PC 광고 1 */
+  #content .cont_upper.area_btn_g .area_l a { display: none; }
+  #content .cont_upper.area_btn_g .area_l {
+    content: var(--asset-ad-pc1);
+    display: block; width: 100%;
+  }
+
+  /* PC 광고 2 : 결국 게시글에 넣음 */
+
+  /* 모바일앱 광고 */
+  #mArticle .banner_wrapper,
+  #mArticle .kakao_ad_area { display: none !important; }
+  
+  /*** 3-2. 프로필 사진 조작 ***/
+
+  /* PC 작성자 프사 변경 */
+  #content .bbs_read_tit .profile_thumb .img_thumb { content: var(--teusoo-00); }
+
+  /* PC 댓글프사 변경 (닉네임이 우정잉인 경우 미변경) */
+  #content .list_comment li:not([data-nickname="우정잉"]):nth-child(12n+1) .profile_thumb .img_thumb { content: var(--teusoo-01); }
+  #content .list_comment li:not([data-nickname="우정잉"]):nth-child(12n+2) .profile_thumb .img_thumb { content: var(--teusoo-02); }
+  #content .list_comment li:not([data-nickname="우정잉"]):nth-child(12n+3) .profile_thumb .img_thumb { content: var(--teusoo-03); }
+  #content .list_comment li:not([data-nickname="우정잉"]):nth-child(12n+4) .profile_thumb .img_thumb { content: var(--teusoo-04); }
+  #content .list_comment li:not([data-nickname="우정잉"]):nth-child(12n+5) .profile_thumb .img_thumb { content: var(--teusoo-05); }
+  #content .list_comment li:not([data-nickname="우정잉"]):nth-child(12n+6) .profile_thumb .img_thumb { content: var(--teusoo-06); }
+  #content .list_comment li:not([data-nickname="우정잉"]):nth-child(12n+7) .profile_thumb .img_thumb { content: var(--teusoo-07); }
+  #content .list_comment li:not([data-nickname="우정잉"]):nth-child(12n+8) .profile_thumb .img_thumb { content: var(--teusoo-08); }
+  #content .list_comment li:not([data-nickname="우정잉"]):nth-child(12n+9) .profile_thumb .img_thumb { content: var(--teusoo-09); }
+  #content .list_comment li:not([data-nickname="우정잉"]):nth-child(12n+10) .profile_thumb .img_thumb { content: var(--teusoo-10); }
+  #content .list_comment li:not([data-nickname="우정잉"]):nth-child(12n+11) .profile_thumb .img_thumb { content: var(--teusoo-11); }
+  #content .list_comment li:not([data-nickname="우정잉"]):nth-child(12n) .profile_thumb .img_thumb { content: var(--teusoo-12); }
+
+  /* 모바일앱 작성자 프사 변경 */
+  #mArticle > div:first-child > :last-child > :first-child { content: var(--teusoo-00); }
+
+  /* 모바일앱 댓글프사 변경 */
+  #mArticle li:nth-child(12n+1) :first-child a:before {
+    content:""; position: absolute; width:100%; height:100%; z-index:2;
+    background: var(--teusoo-01); background-size: contain, cover; 
+  }
+
+  #mArticle li:nth-child(12n+2) :first-child a:before {
+    content:""; position: absolute; width:100%; height:100%; z-index:2;
+    background: var(--teusoo-02); background-size: contain, cover; 
+  }
+
+  #mArticle li:nth-child(12n+3) :first-child a:before {
+    content:""; position: absolute; width:100%; height:100%; z-index:2;
+    background: var(--teusoo-03); background-size: contain, cover; 
+  }
+
+  #mArticle li:nth-child(12n+4) :first-child a:before {
+    content:""; position: absolute; width:100%; height:100%; z-index:2;
+    background: var(--teusoo-04); background-size: contain, cover; 
+  }
+
+  #mArticle li:nth-child(12n+5) :first-child a:before {
+    content:""; position: absolute; width:100%; height:100%; z-index:2;
+    background: var(--teusoo-05); background-size: contain, cover; 
+  }
+
+  #mArticle li:nth-child(12n+6) :first-child a:before {
+    content:""; position: absolute; width:100%; height:100%; z-index:2;
+    background: var(--teusoo-06); background-size: contain, cover; 
+  }
+
+  #mArticle li:nth-child(12n+7) :first-child a:before {
+    content:""; position: absolute; width:100%; height:100%; z-index:2;
+    background: var(--teusoo-07); background-size: contain, cover; 
+  }
+
+  #mArticle li:nth-child(12n+8) :first-child a:before {
+    content:""; position: absolute; width:100%; height:100%; z-index:2;
+    background: var(--teusoo-08); background-size: contain, cover; 
+  }
+
+  #mArticle li:nth-child(12n+9) :first-child a:before {
+    content:""; position: absolute; width:100%; height:100%; z-index:2;
+    background: var(--teusoo-09); background-size: contain, cover; 
+  }
+
+  #mArticle li:nth-child(12n+10) :first-child a:before {
+    content:""; position: absolute; width:100%; height:100%; z-index:2;
+    background: var(--teusoo-10); background-size: contain, cover; 
+  }
+
+  #mArticle li:nth-child(12n+11) :first-child a:before {
+    content:""; position: absolute; width:100%; height:100%; z-index:2;
+    background: var(--teusoo-11); background-size: contain, cover; 
+  }
+
+  #mArticle li:nth-child(12n) :first-child a:before {
+    content:""; position: absolute; width:100%; height:100%; z-index:2;
+    background: var(--teusoo-12); background-size: contain, cover; 
+  }
+
+  /*** 3-3. 카페 등급 아이콘 조작 ***/
+
+  /* PC 05 손님 → 잉끼 */
+  #content .list_comment li .ico_role[src*="_level_05"] { content: var(--level-ingkki); }
+  /* PC 22 죄수 → 잉끼 */
+  #content .list_comment li .ico_role[src*="_level_22"] { content: var(--level-ingkki); }
+  /* PC 25 잉린 → 잉끼 */
+  #content .list_comment li .ico_role[src*="_level_25"] { content: var(--level-ingkki); }
+  /* PC 27 잉친 → 잉끼 */
+  #content .list_comment li .ico_role[src*="_level_27"] { content: var(--level-ingkki); }
+  /* PC 28 우수 → 잉끼 */
+  #content .list_comment li .ico_role[src*="_level_28"] { content: var(--level-ingkki); }
+  /* PC 29 잉여 → 잉끼 */
+  #content .list_comment li .ico_role[src*="_level_29"] { content: var(--level-ingkki); }
+
+  /* PC 30 특별 → 칼 */
+  #content .list_comment li .ico_role[src*="_level_30"] { content: var(--level-special); }
+  /* PC 32 관리자 → 방패 */
+  #content .list_comment li .ico_role[src*="_level_32"] { content: var(--level-admin); }
+  /* PC 40 우정잉 → 방송인 */
+  #content .list_comment li .ico_role[src*="_level_40"] { content: var(--level-ing); }
+
+  /* 모바일앱 댓글쓴이명 앞에 잉끼 아이콘 추가 */
+  #mArticle li :nth-child(2) :first-child:before {
+    content: var(--level-ingkki);
+    display: inline-block;
+    margin-right: 8px;
+  }
+  /* 모바일앱 대댓글쓴이명 앞에 잉끼 아이콘 추가 */
+  #mArticle li :nth-child(3) :first-child:before {
+    content: var(--level-ingkki);
+    display: inline-block;
+    margin-right: 8px;
+  }
+  /* TODO: 모바일앱 댓글에 텍스트 없이 이모티콘만 쓰면 이모티콘 옆에 회원등급 아이콘이 생기는 문제 대응 필요 */
+
+
+  /***** 4. PC 카페 좌우측 스타일 *****/
+  
+  /*** 4-1. PC 좌측 메뉴 ***/
+
+  /* 좌측 메뉴 border-color 변경 포기 */
+
+  /* 카페 프로필 사진 안보이게 */
+  #cafemenu .cafeinfoBox #cafeProfileImage { display: none; }
+
+  /*** 4-2. PC 우측 상단 이동 버튼 ***/
+
+  /* PC 게시글 우측 여백 추가 */
+  #content { margin-right: 100px; }
+
+  /* 상단 이동 버튼 스타일 */
+  #floater {
+    background: var(--asset-floater) no-repeat center / contain;
+    position: fixed;
+    display: inline-block;
+    width: 80px; height: 80px; z-index: 99;
+  }
+
+  /***** 5. PC 카페 하단 스타일 *****/
+
+  /*** 5-1. 게시글 목록 빙글빙글 고래 ***/
+
+  @keyframes rot360 {
+    from { transform: rotate(-360deg); }
+    to { transform: rotate(0deg); }
+  }
+
+  #content #more-article-list .td_title .title_wrapper:before {
+    content: var(--asset-whale);
+    display: inline-block;
+    margin-right: 8px;
+    width: 15px;
+    height: 15px;
+    animation: infinite rot360 1.2s;
+  }
+
+  #content #more-article-list .td_writer .text_writer:before {
+    content: var(--level-ingkki);
+    display: inline-block;
+    margin-right: 8px;
+    width: 15px;
+    height: 15px;
+  }
+
+  /*** 5-2. 푸터 ***/
+
+  /* ::before를 이용하여 저작권 문구 첫번째 줄 앞에 내용 추가 */
+  #footer .copyright1:before {
+    content:"\00a9 2017-2023 트게더 \A";
+    white-space: pre-wrap;
+    font-size: 11px;
+  }
+  /* ::after를 이용하여 저작권 문구 첫번째 줄 뒤에 내용 추가 */
+  #footer .copyright1:after {
+    content:"\A 트게더는 Twitch에서 운영하는 사이트가 아닙니다.";
+    white-space: pre-wrap;
+    font-size: 11px;
+  }
+
+  /* 원래 저작권 문구 두번째 줄 안보이게 */
+  #footer .copyright2, #footer .copyright2 b { font-size: 0 !important; } 
+
+  /* 라이트 모드 버튼 */
+  #footer .copyright2 {
+    width: 54px;
+    height: 29px;
+    background-color: #151515;
+    background-image: var(--asset-light-icon);
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: 32px;
+    border-radius: 35px;
+    padding: 3px 3px;
+    padding-right: 27px;
+    box-sizing: border-box;
+    border: 0;
+    box-shadow: none;
+    display: inline-block;
+    margin: 50px auto 0
+  }
+  #footer .copyright2 a {
+    background-color: #f3f2f0;
+    border: 0;
+    width: 23px;
+    height: 23px;
+    border-radius: 100%;
+    border: 1px solid #f1f1f1;
+    margin-left: 2px;
+    margin-top: 2px;
+    display: block;
+    pointer-events: none; /* 하이퍼링크 클릭 불가능하게 */
+  }
+
+  /* 다크 모드 버튼 */
+  @media (prefers-color-scheme: dark) {
+    #footer .copyright2 {
+      width: 54px;
+      height: 29px;
+      background-color: #f3f2f0;
+      background-image: var(--asset-dark-icon);
+      background-size: 30%;
+      background-repeat: no-repeat;
+      background-position: 7px;
+      border-radius: 35px;
+      padding: 3px 3px;
+      padding-left: 27px;
+      box-sizing: border-box;
+      z-index: 999;
+    }
+    #footer .copyright2 a {
+      background-color: #242424;
+      border: 0;
+      width: 23px;
+      height: 23px;
+      border-radius: 100%;
+      border: 1px solid #535555;
+      margin-left: 28px;
+      margin-top: 2px;
+      pointer-events: none; /* 하이퍼링크 클릭 불가능하게 */
+    }
+  }
+</style>
