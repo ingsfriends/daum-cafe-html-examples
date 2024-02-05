@@ -1,0 +1,40 @@
+<div style="text-align: left;">
+  <img
+    src="https://t1.daumcdn.net/cafeattach/1YV3j/27b8487b73215ef2b8babd29086b94e2f6e5dfec" 
+    style="width: 280px; height: 175px;"></img>
+</div>
+<div>
+  <img
+    src="https://t1.daumcdn.net/cafeattach/1YV3j/b39642a7758d09f2f2ed4b7adc78756ec9c894d0">
+  </img>
+</div>
+<div>
+  <img class="must_show"
+    src="https://t1.daumcdn.net/cafeattach/1YV3j/ba98c0c0112c302644b0e36a068da31b55fd4123" 
+    style="width: 400px; height: 200px;"></img>
+</div>
+<div>
+  <a href="https://cafe.naver.com/ingsfriends">
+    <img class="must_show"
+      src="https://t1.daumcdn.net/cafeattach/1YV3j/6cc4a681afafe8ae0cdf092e776d4b5c3814f0e0"
+      style="width: 100%; height: auto;"></img>
+  </a>
+</div>
+
+<!-- 특정 사진 빼고 다 안보이게 하기 -->
+<style>
+  /* PC 사진 안보이게 */
+  #content .bbs_contents img {
+    display: none;
+  }
+  /* 모바일 사진 안보이게 */
+  #mArticle > div:nth-child(2) img,
+  #mArticle > div:nth-child(3) img  {
+    display: none;
+  }
+
+  /* 특정 사진 보이게 */
+  img.must_show {
+    display: inline-block !important;
+  }
+</style>
